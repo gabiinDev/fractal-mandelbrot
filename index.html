@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mandelbrot</title>
+    <style>
+      body {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+        background-color: #121212;
+        color: #e0e0e0;
+        font-family: Arial, sans-serif;
+      }
+      canvas {
+        border: 1px solid #404040;
+        box-shadow: 0 0 20px rgba(255, 255, 255, 0.1);
+      }
+      h1 {
+        margin-bottom: 20px;
+      }
+      #info {
+        margin-top: 20px;
+        font-size: 14px;
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Fractal de Mandelbrot</h1>
+    <canvas id="mandelbrotCanvas" width="800" height="600"></canvas>
+    <div id="info">Tiempo de renderizado: <span id="renderTime"></span></div>
+    <script type="module">
+      import { drawMandelbrot } from "./index.js";
+      const canvas = document.getElementById("mandelbrotCanvas");
+      const startTime = performance.now();
+      drawMandelbrot(canvas, 1000);
+      const endTime = performance.now();
+      const renderTime = endTime - startTime;
+      document.getElementById("renderTime").textContent = `${renderTime.toFixed(
+        2
+      )} ms`;
+    </script>
+  </body>
+</html>
