@@ -13,7 +13,7 @@ Este proyecto es una simple demostración, a modo de aprendizaje, en el cual se 
 
 1. **Instalar dependencias necesarias para WebAssembly:**
 
-Asegúrate de tener Rust y `wasm-pack` instalados. Puedes instalarlos con los siguientes comandos:
+Es necesario tener Rust y `wasm-pack` instalados. Se pueden instalar con los siguientes comandos:
 
 ```sh
 curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
@@ -22,7 +22,7 @@ cargo install wasm-pack
 
 2. **Compilar librería WebAssembly:**
 
-Navega a la carpeta mandelbrot_wasm y compila la librería:
+Navegar a la carpeta mandelbrot_wasm y compilar la librería:
 
 ```sh
   cd mandelbrot_wasm
@@ -30,7 +30,7 @@ Navega a la carpeta mandelbrot_wasm y compila la librería:
 ```
 
 ## Información Adicional
-Para obtener información sobre cómo instalar y compilar la librería Rust, consulta el archivo README.md en la carpeta mandelbrot_wasm:
+Para obtener información sobre cómo instalar y compilar la librería Rust, consultar el archivo README.md en la carpeta mandelbrot_wasm:
 
-[mandelbrot_wasm/README.md](mandelbrot_wasm/README.md)
+[mandelbrot_wasm/README.md](mandelbrot_wasm/)
 
